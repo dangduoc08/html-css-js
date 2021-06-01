@@ -1,0 +1,33 @@
+{
+  "include": [
+    "server/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ESNext",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "suppressImplicitAnyIndexErrors": false
+  }
+}
