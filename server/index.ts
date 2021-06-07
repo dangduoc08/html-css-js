@@ -3,6 +3,7 @@ import path from 'path'
 import { AddressInfo } from 'net'
 import WebSocket from 'ws'
 import express, { Express } from 'express'
+import axios from 'axios'
 import ChildProcess from 'child_process'
 import morgan from 'morgan'
 import { Logger } from './logger'
@@ -24,7 +25,7 @@ const logger: Logger = Logger.getInstance({
   depth: true
 })
 
-const publicdir: { dir: string, watch: boolean }[] = [
+const publicDir: { dir: string, watch: boolean }[] = [
   {
     dir: 'public',
     watch: true
@@ -35,7 +36,7 @@ const publicdir: { dir: string, watch: boolean }[] = [
   }
 ]
 
-publicdir.forEach(dirOpts => {
+publicDir.forEach(dirOpts => {
   const {
     dir,
     watch

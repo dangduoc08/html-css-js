@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <script type="module">
+    import { reload } from './javascripts/reload.js'; reload()
+  </script>
+  <title>Common HTML Elements</title>
+</head>
+
+<body>
+  <div>Block</div>
+  <span>Inline-block</span>
+
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h1>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <b>Bold</b>
+    <strong>Strong</strong>
+    <i>Italic</i>
+    <p>Paragraph</p>
+
+    <ul>
+      <li>
+        Home
+      </li>
+      <li>
+        Band
+      </li>
+      <li>
+        Tour
+      </li>
+    </ul>
+
+    <table border="1px" width="100%">
+      <tr>
+        <th>
+          Name
+        </th>
+        <th colspan="3">
+          Price
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Nike Air Force 1
+        </td>
+        <td>
+          2.100.000 VND
+        </td>
+        <td rowspan="2">
+          Limitted
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Nike Air Force 1
+        </td>
+        <td>
+          2.100.000 VND
+        </td>
+        <td>
+          Limitted
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Nike Air Force 1
+        </td>
+        <td>
+          2.100.000 VND
+        </td>
+        <td>
+          Limitted
+        </td>
+      </tr>
+    </table>
+
+    <form action="/test" method="GET">
+      <label for="duoc">Username</label>
+      <input id=duoc name="username" value="" placeholder="Nhap username" />
+      <input type="password" name="password" value="" placeholder="Nhap password" />
+
+      <input type="submit" value="submit" />
+
+      <input type="checkbox" />
+
+      <input type="radio" />
+      <input type="radio" />
+
+      <textarea> </textarea>
+
+      <input type="color" />
+
+
+      <input type="date" />
+
+      <button>Press me</button>
+
+      <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </form>
+
+    <a href="http://google.com">click to google</a>
+
+    <img src="https://i.ytimg.com/vi/c1RbWE_xuIc/maxresdefault.jpg" width="100px" />
+</body>
+
+</html>
