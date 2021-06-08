@@ -5,6 +5,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="./style.css">
   <script defer src="./script.js"></script>
+  <script defer src="./javascripts/page.js"></script>
   <script type="module">
     import { reload } from './javascripts/reload.js'; reload()
   </script>
@@ -13,31 +14,22 @@
 
 <body>
   <main>
-    <div class="menu">
+    <nav class="menu">
       <ul class="menu__container">
-        <li class="menu_active menu__item">
-          <a href="/common_html_elements.html">Common HTML Elements</a>
+        <li class="menu__item">
+          <a onclick="navigate(this)" data-href="/html_elements.html">HTML Elements</a>
         </li>
         <li class="menu__item">
-          <a href="/flex.html">Flexbox</a>
+          <a onclick="navigate(this)" data-href="/flex.html">Flexbox</a>
         </li>
         <li class="menu__item">
-          <a href="/grid.html">Grid</a>
-        </li>
-        <li class="menu__item">
-          <a>sql</a>
-        </li>
-        <li class="menu__item">
-          <a>python</a>
-        </li>
-        <li class="menu__item">
-          <a>php</a>
-        </li>
-        <li class="menu__item">
-          <a>bootstrap</a>
+          <a onclick="navigate(this)" data-href="/grid.html">Grid</a>
         </li>
       </ul>
-    </div>
+    </nav>
+    <section id="container">
+
+    </section>
   </main>
 </body>
 

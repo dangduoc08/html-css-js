@@ -2,8 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { AddressInfo } from 'net'
 import WebSocket from 'ws'
-import express, { Express } from 'express'
-import axios from 'axios'
+import express, { Express, Request, Response } from 'express'
 import ChildProcess from 'child_process'
 import morgan from 'morgan'
 import { Logger } from './logger'
@@ -82,6 +81,13 @@ app.use(morgan(
     skip: req => req.path === '/favicon.ico'
   }
 ))
+app.all('/submit', (req: Request, res: Response) => {
+  res.status(201).json({
+    message: 'Received',
+    body: req.body,
+    query: req.query
+  })
+})
 
 const server = app.listen(parseInt(process?.env?.SERVER_PORT ?? '80'), '127.0.0.1')
 

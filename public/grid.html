@@ -1,31 +1,10 @@
-<!doctype html>
-<html>
-
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="./grid.css">
-  <script defer src="./script.js"></script>
-  <script type="module">
-    import { reload } from './javascripts/reload.js'; reload()
-  </script>
-  <title>CSS Grid</title>
-</head>
-
-<body>
-  <main>
-    <header>
-      <h1>CSS Grid</h1>
-    </header>
-    <article class="gridbox">
-      <div class="gridbox__container container--grid">
-        <div id="item-1" class="gridbox__item item--grid">Item 1</div>
-        <div id="item-2" class="gridbox__item item--grid">Item 2</div>
-        <div id="item-3" class="gridbox__item item--grid">Item 3</div>
-        <div id="item-4" class="gridbox__item item--grid">Item 4</div>
-        <div id="item-5" class="gridbox__item item--grid">Item 5</div>
-      </div>
-    </article>
-  </main>
-</body>
-
-</html>
+<link rel="stylesheet" href="./grid.css">
+<article class="grid">
+  <div class="grid__container container--grid">
+    <div id="item-1" class="grid__item item--grid">Item 1</div>
+    <div id="item-2" class="grid__item item--grid">Item 2</div>
+    <div id="item-3" class="grid__item item--grid">Item 3</div>
+    <div id="item-4" class="grid__item item--grid">Item 4</div>
+    <div id="item-5" class="grid__item item--grid">Item 5</div>
+  </div>
+</article>

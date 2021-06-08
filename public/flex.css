@@ -1,12 +1,3 @@
-body {
-  font-family: Sentinel SSm A,Sentinel SSm B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-}
-
-main {
-  padding-top: 5vh;
-  background-color: #ededed;
-}
-
 .flexbox {
   height: auto;
   text-align: center;
@@ -15,7 +6,7 @@ main {
 .flexbox__container {
   width: 100%;
   height: 460px;
-  background: linear-gradient(to right, #1595b6, rgba(31,38,103,0.9));
+  background: linear-gradient(to right, #1595b6, rgba(31, 38, 103, 0.9));
   border: 1px solid black;
 }
 
@@ -33,30 +24,17 @@ main {
 }
 
 /* Style write here */
-.container--flex {
 
-}
+.container--flex {}
 
-.item--flex {
+.item--flex {}
 
-}
+#item-1 {}
 
-#item-1 {
+#item-2 {}
 
-}
+#item-3 {}
 
-#item-2 {
+#item-4 {}
 
-}
-
-#item-3 {
-
-}
-
-#item-4 {
-
-}
-
-#item-5 {
-
-}
+#item-5 {}
