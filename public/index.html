@@ -2,11 +2,15 @@
 <html>
 
 <head>
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="./style.css">
-  <script defer src="./script.js"></script>
-  <script defer src="./javascripts/page.js"></script>
-  <script type="module">
+  <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+  <link rel='stylesheet' href='./style.css'>
+  <link rel='stylesheet' href='./flex.css'>
+  <link rel='stylesheet' href='./grid.css'>
+  <link rel='stylesheet' href='./pseudo_class.css'>
+  <link rel='stylesheet' href='./facebook_signup.css'>
+  <script defer src='./script.js'></script>
+  <script defer src='./javascripts/page.js'></script>
+  <script type='module'>
     import { reload } from './javascripts/reload.js'; reload()
   </script>
   <title>HTML - CSS - JS</title>
@@ -14,20 +18,26 @@
 
 <body>
   <main>
-    <nav class="menu">
-      <ul class="menu__container">
-        <li class="menu__item">
-          <a onclick="navigate(this)" data-href="/html_elements.html">HTML Elements</a>
+    <nav class='menu'>
+      <ul class='menu__container'>
+        <li class='menu__item'>
+          <a onclick='navigate(this)' data-href='/html_elements.html'>HTML Elements</a>
         </li>
-        <li class="menu__item">
-          <a onclick="navigate(this)" data-href="/flex.html">Flexbox</a>
+        <li class='menu__item'>
+          <a onclick='navigate(this)' data-href='/flex.html'>Flexbox</a>
         </li>
-        <li class="menu__item">
-          <a onclick="navigate(this)" data-href="/grid.html">Grid</a>
+        <li class='menu__item'>
+          <a onclick='navigate(this)' data-href='/grid.html'>Grid</a>
+        </li>
+        <li class='menu__item'>
+          <a onclick='navigate(this)' data-href='/pseudo_class.html'>Pseudo-class</a>
+        </li>
+        <li class='menu__item'>
+          <a onclick='navigate(this)' data-href='/facebook_signup.html'>Facebook Signup</a>
         </li>
       </ul>
     </nav>
-    <section id="container">
+    <section id='container'>
 
     </section>
   </main>

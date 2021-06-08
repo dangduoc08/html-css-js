@@ -1,0 +1,56 @@
+.pseudo-class a, .pseudo-class input, .pseudo-class .unreal {
+  padding: 8px;
+  border-radius: 15px;
+  text-decoration: none;
+  background-color: lemonchiffon;
+}
+
+.pseudo-class a:visited {
+  /* clicked it */
+  background-color: lavender;
+}
+
+.pseudo-class a:hover {
+  /* mouse over */
+  background-color: goldenrod;
+}
+
+.pseudo-class a:active {
+  /* click it */
+  background-color: hotpink;
+}
+
+.pseudo-class form:focus-within {
+  /* place mouse in itself element or its child elements */
+  background-color: indigo;
+}
+
+.pseudo-class input:focus-visible {
+  /* check again */
+  outline: none;
+}
+
+.pseudo-class input:focus {
+  /* place mouse in itself element */
+  background-color: greenyellow;
+}
+
+.pseudo-class p:target {
+  /* style element as an anchor */
+  background-color: coral;
+}
+
+.pseudo-class .unreal::before {
+  content: '';
+  background-color: chocolate;
+  width: 0;
+}
+
+.pseudo-class .unreal:hover::before {
+  content: 'Before content ';
+  width: 100%;
+}
+
+.pseudo-class .unreal::after {
+  content: ' After content';
+}
