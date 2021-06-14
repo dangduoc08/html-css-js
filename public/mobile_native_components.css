@@ -1,46 +1,44 @@
-.sw-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+.mb-container {
+  --bar: 2em;
+  --round-corner: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.mb-container input {
+  display: none;
 }
 
 .sw-ios__wrapper {}
 
 .sw-ios__item {}
 
-.sw-ios__item>input {
-  display: none;
-}
-
-/* checked */
 .sw-ios__item>input[type="checkbox"]:checked+.sw-ios__bar>.sw-ios__btn {
-  left: 32px;
+  left: var(--bar);
 }
 
-/* unchecked */
 .sw-ios__item>input[type="checkbox"]+.sw-ios__bar>.sw-ios__btn {
   left: 0;
 }
 
 .sw-ios__btn {
-  width: 32px;
-  height: 32px;
+  width: var(--bar);
+  height: var(--bar);
   background-color: white;
-  border-radius: 25px;
+  border-radius: var(--round-corner);
   align-self: center;
   box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 30%);
-  transition: linear .25s;
+  transition: linear .2s;
   position: relative;
 }
 
 .sw-ios__bar {
-  width: 64px;
-  height: 32px;
+  width: calc(var(--bar) * 2);
+  height: var(--bar);
   background-color: #51d568;
   display: flex;
-  padding: 4px 4px;
-  border-radius: 25px;
+  padding: calc(var(--bar) / 8);
+  border-radius: var(--round-corner);
 }
 
 .sw-android__wrapper {}
@@ -50,37 +48,31 @@
   align-items: center;
 }
 
-.sw-android__item>input {
-  display: none;
-}
-
-/* checked */
 .sw-android__item>input[type="checkbox"]:checked+.sw-android__btn {
-  right: 32px;
+  right: var(--bar);
   box-shadow: 1px 1px 5px 2px rgb(0 0 0 / 30%);
 }
 
-/* unchecked */
 .sw-android__item>input[type="checkbox"]+.sw-android__btn {
-  right: 72px;
+  right: calc((var(--bar) * 2) + (var(--bar) / 4));
   box-shadow: -1px 1px 5px 2px rgb(0 0 0 / 30%);
 }
 
 .sw-android__btn {
-  width: 32px;
-  height: 32px;
+  width: var(--bar);
+  height: var(--bar);
   background-color: #009688;
-  border-radius: 25px;
+  border-radius: var(--round-corner);
   align-self: center;
-  transition: linear .25s;
+  transition: linear .2s;
   position: relative;
 }
 
 .sw-android__bar {
-  width: 64px;
-  height: 16px;
+  width: calc(var(--bar) * 2);
+  height: calc(var(--bar) / 2);
   background-color: #77c2bb;
   display: flex;
-  padding: 4px 4px;
-  border-radius: 25px;
+  padding: calc(var(--bar) / 8);
+  border-radius: var(--round-corner);
 }
