@@ -1,53 +1,58 @@
-<article class="facebook-signup" style="text-align: center; ">
+<article class='facebook-signup' style='text-align: center;'>
 
-    <form>
-        <div class=d_makecol>
-            <label id=lb_Regist>Registration</label>
-            <label id=lb_Regist2> Quick and easy.</label>
-        </div>
-        <div>
-            <input class=txt_Name placeholder='Surname' required />
-            <input class=txt_Name placeholder='Name' />
-        </div>
-        <div id=d_additionalinfo>
-            <input placeholder='Phone number or Email' required />
-        </div>
-        <div>
-            <input type="password" placeholder='password' required />
-        </div>
-        <div class=d_makecol>
-            <label class=lb_comment> Date of birth</label>
-            <input type='date' placeholder='Day' />
-        </div>
-        <div class=d_makecol>
-            <label class=lb_comment>Sex</label>
-            <div>
-                <table style="width:100%">
-                    <tr>
-                        <td>
-                            <label for="Female">Female</label>
-                            <input id="Female" type="radio" name="radSex"/>
-                        </td>
-                        <td>
-                            <label for="Male">Male</label>
-                            <input id="Male" type="radio" name="radSex"/>
-                        </td>
-                        <td>
-                            <label for="Custom">Custom</label>
-                            <input id="Custom" type="radio" name="radSex"/>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div>
-            <label id=last_comment class=lb_comment>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You can receive our notifications via SMS and unsubscribe at any time.</label>
-        </div>
-        <div class="d_button">
-            <input id='button' type='button' value='Registration' />
-        </div>
+  <form class='fb-signup-form' action="/submit" method='POST'>
+    <div class=d_makecol>
+      <label id='lb_Regist'>Registration</label>
+      <label id='lb_Regist2'> Quick and easy.</label>
+    </div>
 
-    </form>
+    <div>
+      <input class='txt_Name' placeholder='Surname' name='surname' required />
+      <input class='txt_Name' placeholder='Name' nam='name' />
+    </div>
+
+    <div id='d_additionalinfo'>
+      <input placeholder='Phone number or Email' name='phone_email' required />
+    </div>
+
+    <div>
+      <input type='password' placeholder='Password' name='password' required />
+    </div>
+
+    <div class='d_makecol'>
+      <label class='lb_comment'> Date of birth</label>
+      <input type='date' placeholder='Day' />
+    </div>
+
+    <div class='d_makecol'>
+      <label class='lb_comment'>Sex</label>
+      <div>
+        <div class='rad-sex'>
+          <label for='Female'>Female</label>
+          <input id='Female' type='radio' name='sex' />
+        </div>
+        <div class='rad-sex'>
+          <label for='Male'>Male</label>
+          <input id='Male' type='radio' name='sex' />
+        </div>
+        <div class='rad-sex'>
+          <label for='Custom'>Custom</label>
+          <input id='Custom' type='radio' name='sex' />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label id='last_comment' class='lb_comment'>
+        By clicking Sign Up, you agree to our Terms, Data Policy and Cookie
+        Policy. You can receive our notifications via SMS and unsubscribe at any time.
+      </label>
+    </div>
+    <div class='d_button'>
+      <input id='button' type='submit' value='Registration' />
+    </div>
+
+  </form>
 
 
 </article>
