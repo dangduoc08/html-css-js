@@ -9,7 +9,8 @@
 }
 
 .grid__item {
-  --local: 100px;
+  --local: 100%;
+  height: var(--local);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,24 +27,78 @@
 
 /* Style write here */
 
-.grid--as-grid {}
+.grid--as-grid {
+  display: grid;
+  /* default always = auto */
+  /* grid-template-columns: 80px 80px 80px 80px; */
+  /* grid-template-columns: 25% 25% 25% 25%; */
+  /* grid-template-columns: [col-1] 1fr [col-2] 2fr [col-3] 3fr [col-4] 4fr [col-end]; */
+  /* grid-template-columns: repeat(1, 1fr 1.5fr 2fr [col-name]); */
+  /* grid-template-rows: 100px 150px; */
+  /* grid-template-rows: [row-1] 1fr [row-2] 2fr [row-3] auto [row-end]; */
+  /* grid-template-rows: repeat(1, 2fr 1fr [row-name]); */
+
+  /* col-span
+  grid-template-areas: 
+    "item1 item3 item5"
+    "item2 item4 item6"
+    "item7 item7 .";  */
+
+  /* row-span
+  grid-template-areas: 
+    "item7 item3 item5"
+    "item7 item4 item6"
+    "item7 item8 ."; */
+
+  /* col-row-span
+  grid-template-areas: 
+    "item7 item7 item5"
+    "item7 item7 item6"
+    "item7 item7 ."; */
+
+  grid-template: 
+    [row-start] "item1 item2 item3" 1fr 
+    [row-1] "item4 item5 item6" 2fr
+    [row-2] "item7 item8 ." 3fr [row-end]
+    / 1fr 2fr 1fr;
+    
+  /* column-gap: 8px;
+  row-gap: 8px; */
+  gap: 10px 15px;
+}
 
 .grid__item--as-grid {}
 
-#grid__item--1 {}
+#grid__item--1 {
+  /* grid-area: item1; */
+}
 
-#grid__item--2 {}
+#grid__item--2 {
+  /* grid-area: item2; */
+}
 
-#grid__item--3 {}
+#grid__item--3 {
+  /* grid-area: item3; */
+}
 
-#grid__item--4 {}
+#grid__item--4 {
+  /* grid-area: item4; */
+}
 
-#grid__item--5 {}
+#grid__item--5 {
+  /* grid-area: item5; */
+}
 
-#grid__item--6 {}
+#grid__item--6 {
+  /* grid-area: item6; */
+}
 
-#grid__item--7 {}
+#grid__item--7 {
+  /* grid-area: item7; */
+}
 
-#grid__item--8 {}
+#grid__item--8 {
+  /* grid-area: item8; */
+}
 
 .grid__text {}
