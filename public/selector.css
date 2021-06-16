@@ -1,0 +1,57 @@
+/* >, +, ~ */
+
+.selector>div {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+span {
+  padding: 16px;
+  margin-bottom: 16px;
+  display: block;
+  background-color: cornflowerblue;
+}
+
+#selector__id {
+  background-color: cornsilk;
+}
+
+.selector__class {
+  background-color: burlywood;
+}
+
+div[type='block-1'] {
+  background-color: cadetblue;
+}
+
+div[type='block-1']+div {
+  background-color: azure;
+}
+
+div[type='block-1']+div+div {
+  background-color: thistle;
+}
+
+/* Select level 2 elements only */
+
+.selector__class>div {
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: blanchedalmond;
+}
+
+.selector__class>div>div {
+  background-color: aquamarine;
+}
+
+div~p {
+  background-color: tomato;
+}
+
+ol>li:nth-child(even) {
+  background-color: violet;
+}
+
+ol>li:nth-child(odd) {
+  background-color: thistle;
+}
