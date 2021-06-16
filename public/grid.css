@@ -9,8 +9,6 @@
 }
 
 .grid__item {
-  --local: 100%;
-  height: var(--local);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,52 +27,67 @@
 
 .grid--as-grid {
   display: grid;
+  /* height: 100vh; */
   /* default always = auto */
   /* grid-template-columns: 80px 80px 80px 80px; */
   /* grid-template-columns: 25% 25% 25% 25%; */
   /* grid-template-columns: [col-1] 1fr [col-2] 2fr [col-3] 3fr [col-4] 4fr [col-end]; */
-  /* grid-template-columns: repeat(1, 1fr 1.5fr 2fr [col-name]); */
+  /* grid-template-columns: repeat(3, 1fr [columns-name]); */
   /* grid-template-rows: 100px 150px; */
-  /* grid-template-rows: [row-1] 1fr [row-2] 2fr [row-3] auto [row-end]; */
-  /* grid-template-rows: repeat(1, 2fr 1fr [row-name]); */
-
+  /* grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3] 1fr [row-end]; */
+  /* grid-template-rows: repeat(3, 1fr [row-name]); */
   /* col-span
   grid-template-areas: 
     "item1 item3 item5"
     "item2 item4 item6"
     "item7 item7 .";  */
-
   /* row-span
   grid-template-areas: 
     "item7 item3 item5"
     "item7 item4 item6"
     "item7 item8 ."; */
-
   /* col-row-span
   grid-template-areas: 
     "item7 item7 item5"
     "item7 item7 item6"
     "item7 item7 ."; */
-
-  grid-template: 
-    [row-start] "item1 item2 item3" 1fr 
-    [row-1] "item4 item5 item6" 2fr
-    [row-2] "item7 item8 ." 3fr [row-end]
-    / 1fr 2fr 1fr;
-    
+  /* grid-template: [row-start] "item1 item2 item3" 1fr [row-1] "item4 item5 item6" 1fr [row-2] "item7 item8 ." 1fr [row-end] / 1fr 1fr 1fr; */
   /* column-gap: 8px;
   row-gap: 8px; */
-  gap: 10px 15px;
+  /* gap: 10px 15px; */
+  /* justify-items: start; */
+  /* align-items: start; */
+  /* place-items: stretch stretch; */
+  /* grid-template-rows: 2fr 1fr; */
+  /* default size for columns or rows */
+  /* grid-auto-columns: 50px 60px 80px; */
+  /* grid-auto-rows: 100px 60px 90px 120px; */
+  /* grid-auto-rows: minmax(32px, 40px); */
+  /* grid-auto-flow: column dense; */
+  /* gap: 1em;
+  grid-template-areas: "item1 item2 item3" "item4 item5 item6" "item7 item8 .";
+  grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+  grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3] 1fr [row-end];
+  grid-auto-flow: row; */
+
+  grid-template-columns: 60px 60px 60px 60px 60px;
+  grid-template-rows: 30px 30px;
+  grid-auto-flow: row;
 }
 
 .grid__item--as-grid {}
 
 #grid__item--1 {
   /* grid-area: item1; */
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
 #grid__item--2 {
   /* grid-area: item2; */
+  /* grid-column-start: item1; */
+  /* grid-column-end: span 2; */
+  /* grid-column: 1 / span 2; */
 }
 
 #grid__item--3 {
@@ -91,14 +104,24 @@
 
 #grid__item--6 {
   /* grid-area: item6; */
+  /* grid-row-start: 1; */
+  /* grid-row-end: span 3; */
+  /* grid-row: 1 / span 3; */
 }
 
 #grid__item--7 {
+  /* height: 80px; */
+  /* width: 80px; */
   /* grid-area: item7; */
+  /* justify-self: center;
+  align-self: center; */
+  /* place-self: start end; */
 }
 
 #grid__item--8 {
   /* grid-area: item8; */
+  grid-column: 5;
+  grid-row: 1 / 3;
 }
 
 .grid__text {}
