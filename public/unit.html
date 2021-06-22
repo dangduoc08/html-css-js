@@ -1,0 +1,109 @@
+<script defer src="./unit.js"></script>
+<article class='unit'>
+  <section class='unit__absolute'>
+    <h3>
+      Absolute - Based On 16px Standard
+    </h3>
+    <ul>
+      <li>16px</li>
+      <li>12pt (1px = 0.75pt)</li>
+      <li>1pc (1px = 0.0625pc)</li>
+      <li>0.4233328cm (1px = 0.0264583cm)</li>
+      <li>4.233328mm (1px = 0.264583mm)</li>
+      <li>0.166672in (1px = 0.010417in)</li>
+    </ul>
+  </section>
+
+  <section class='unit__relative'>
+    <h3>
+      Relative
+    </h3>
+    <div class='unit__form'>
+      <label for='root-fs'>
+        Current font-size of root element:
+      </label>
+      <div class='unit__edit'>
+        <textarea id='root-fs' style='font-weight: 800' rows=5 cols=20 disabled></textarea>
+        <button id='root-fs-incr'>
+          Increase +1px
+        </button>
+        <button id='root-fs-decr'>
+          Decrease -1px
+        </button>
+      </div>
+    </div>
+    <div class='unit__form'>
+      <label for='unit-fs'>
+        Current font-size of parent element:
+      </label>
+      <div class='unit__edit'>
+        <textarea id='unit-fs' style='font-weight: 800' rows=5 cols=20 disabled></textarea>
+        <button id='unit-fs-incr'>
+          Increase +1px
+        </button>
+        <button id='unit-fs-decr'>
+          Decrease -1px
+        </button>
+      </div>
+    </div>
+
+    <div class='viewport__form'>
+      <label for='viewport-fs'>
+        Current viewport:
+      </label>
+      <div class='viewport__edit'>
+        <button id='viewport-fs-wdecr'>
+          &#8592
+        </button>
+        <button id='viewport-fs-wincr'>
+          &#8594
+        </button>
+        <textarea id='viewport-fs' style='font-weight: 800' rows=4 cols=20 disabled></textarea>
+        <button id='viewport-fs-hincr'>
+          &#8593
+        </button>
+        <button id='viewport-fs-hdecr'>
+          &#8595
+        </button>
+      </div>
+    </div>
+
+    <ul>
+      <li>
+        114% (% Relative to the parent element)
+        <br />
+        <i>*Click parent element buttons to change font-size</i>
+      </li>
+      <li>
+        1.14em (Relative to the font-size of current element)
+        <br />
+        <i>*Applying ul's font-size, therefore click parent element buttons to change font-size</i>
+      </li>
+      <li>
+        1rem (Relative to font-size of the root element)
+        <br />
+        <i>*Click root element buttons to change font-size</i>
+      </li>
+      <li>
+        0.625vw (Relative to 1% of the width of the viewport*)
+        <br />
+        <i>*Resize view screen width</i>
+      </li>
+      <li>
+        1.20391271633vh (Relative to 1% of the height of the viewport*)
+        <br />
+        <i>*Resize view screen height</i>
+      </li>
+      <li>
+        1.20391271633vmin (Relative to 1% of viewport's* smaller dimension)
+        <br />
+        <i>*Resize view screen width or height</i>
+      </li>
+      <li>
+        0.625vmax (Relative to 1% of viewport's* larger dimension)
+        <br />
+        <i>*Resize view screen width or height</i>
+      </li>
+    </ul>
+  </section>
+</article>

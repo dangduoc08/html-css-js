@@ -15,6 +15,26 @@ function navigate(self) {
     .then(response => response.text())
     .then(htmlPage => {
       const container = document.getElementById('container')
+      const matchedScripts = htmlPage.match(/\<script(.*?)<\/script>/gi)
+
+      if (matchedScripts) {
+        matchedScripts.forEach(matchedScript => {
+          const matchedSrc = matchedScript.match(/src=(.*?).js/gi)
+          if (matchedSrc) {
+            matchedSrc.forEach(src => {
+              fetch(src.replace(/(src='.\/|src=".\/)/gi, ''))
+                .then(response => response.text())
+                .then(jsCode => {
+                  const scriptNode = document.createElement('script')
+                  scriptNode.innerHTML = jsCode
+                  htmlPage.replace(matchedScript, '')
+                  container.appendChild(scriptNode)
+                })
+            })
+          }
+        })
+      }
+
       container.innerHTML = htmlPage
       localStorage.setItem(key, href)
 

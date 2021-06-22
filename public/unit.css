@@ -1,0 +1,146 @@
+.unit {
+  font-size: 14px;
+}
+
+.unit li {
+  padding: .4rem;
+}
+
+.unit li i {
+  color: tomato;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.unit__absolute li:nth-child(1) {
+  font-size: 16px;
+}
+
+.unit__absolute li:nth-child(2) {
+  font-size: calc(16 * 0.75pt);
+}
+
+.unit__absolute li:nth-child(3) {
+  font-size: calc(16 * 0.0625pc);
+}
+
+.unit__absolute li:nth-child(4) {
+  font-size: calc(16 * 0.0264583cm);
+}
+
+.unit__absolute li:nth-child(5) {
+  font-size: calc(16 * 0.264583mm);
+}
+
+.unit__absolute li:nth-child(6) {
+  font-size: calc(16 * 0.010417in);
+}
+
+.unit__relative li:nth-child(1) {
+  font-size: 114%;
+}
+
+.unit__relative li:nth-child(2) {
+  font-size: 1.14em;
+}
+
+.unit__relative li:nth-child(3) {
+  font-size: 1rem;
+}
+
+.unit__relative li:nth-child(4) {
+  font-size: 0.625vw;
+}
+
+.unit__relative li:nth-child(5) {
+  font-size: 1.20391271633vh;
+}
+
+.unit__relative li:nth-child(6) {
+  font-size: 1.20391271633vmin;
+}
+
+.unit__relative li:nth-child(7) {
+  font-size: 0.625vmax;
+}
+
+.unit__form, .viewport__form {
+  padding: .4rem;
+}
+
+.unit__form label, .viewport__form label {
+  font-weight: 700;
+}
+
+.unit__edit {
+  display: grid;
+  grid-template-columns: repeat(1, 10% 5%);
+  grid-gap: .5rem;
+}
+
+.unit__edit textarea {
+  grid-row: 1 / span 2;
+  background-color: #282a35;
+  color: peru;
+  resize: none;
+  overflow: hidden;
+}
+
+#root-fs-incr, #unit-fs-incr, #viewport-fs-wincr, #viewport-fs-hincr {
+  background-color: steelblue;
+  color: #fff;
+  border-radius: 3px;
+  border-width: 0;
+  cursor: pointer;
+}
+
+#root-fs-decr, #unit-fs-decr, #viewport-fs-wdecr, #viewport-fs-hdecr {
+  background-color: orangered;
+  color: #fff;
+  border-radius: 3px;
+  border-width: 0;
+  cursor: pointer;
+}
+
+#root-fs-incr:hover, #unit-fs-incr:hover, #viewport-fs-wincr:hover, #viewport-fs-hincr:hover {
+  background-color: #4682b4cc;
+}
+
+#root-fs-decr:hover, #unit-fs-decr:hover, #viewport-fs-wdecr:hover, #viewport-fs-hdecr:hover {
+  background-color: #ff4500cc;
+}
+
+.viewport__edit {
+  display: grid;
+  grid-template-columns: repeat(1, 5% 5% 10% 5% 5%);
+  grid-gap: .5rem;
+}
+
+#viewport-fs-wdecr {
+  grid-column: 1 / span 1;
+  grid-row: span 2;
+}
+
+#viewport-fs-wincr {
+  grid-column: 2 / span 1;
+  grid-row: span 2;
+}
+
+.viewport__edit textarea {
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 2;
+  background-color: #282a35;
+  color: peru;
+  resize: none;
+  overflow: hidden;
+}
+
+#viewport-fs-hincr {
+  grid-row: 3 / span 1;
+  width: 50%;
+}
+
+#viewport-fs-hdecr {
+  grid-row: 4 / span 1;
+  width: 50%;
+}

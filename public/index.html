@@ -8,11 +8,13 @@
   <link rel='stylesheet' href='./grid.css'>
   <link rel='stylesheet' href='./pseudo_class.css'>
   <link rel='stylesheet' href='./mobile_native_components.css'>
+  <link rel='stylesheet' href='./unit.css'>
   <script defer src='./script.js'></script>
   <script defer src='./javascripts/page.js'></script>
   <script type='module'>
     import { reload } from './javascripts/reload.js'; reload()
   </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML - CSS - JS</title>
 </head>
 
@@ -36,10 +38,16 @@
           <a onclick='navigate(this)' data-href='/facebook_signup.html'>Facebook Signup</a>
         </li>
         <li class='menu__item'>
+          <a onclick='navigate(this)' data-href='/google_signup.html'>Google Signup</a>
+        </li>
+        <li class='menu__item'>
           <a onclick='navigate(this)' data-href='/mobile_native_components.html'>Mobile Native Components</a>
         </li>
         <li class='menu__item'>
-          <a onclick='navigate(this)' data-href='/selector.html'>CSS Selector</a>
+          <a onclick='navigate(this)' data-href='/selector.html'>Selector</a>
+        </li>
+        <li class='menu__item'>
+          <a onclick='navigate(this)' data-href='/unit.html'>Unit</a>
         </li>
       </ul>
     </nav>
