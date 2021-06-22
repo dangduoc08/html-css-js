@@ -74,14 +74,14 @@
 
 .unit__edit {
   display: grid;
-  grid-template-columns: repeat(1, 10% 5%);
+  grid-template-columns: repeat(1, 20% 10%);
   grid-gap: .5rem;
 }
 
 .unit__edit textarea {
   grid-row: 1 / span 2;
   background-color: #282a35;
-  color: peru;
+  color: orange;
   resize: none;
   overflow: hidden;
 }
@@ -112,7 +112,7 @@
 
 .viewport__edit {
   display: grid;
-  grid-template-columns: repeat(1, 5% 5% 10% 5% 5%);
+  grid-template-columns: repeat(1, 10% 10% 20% 10% 10%);
   grid-gap: .5rem;
 }
 
@@ -130,7 +130,7 @@
   grid-column: 1 / span 2;
   grid-row: 3 / span 2;
   background-color: #282a35;
-  color: peru;
+  color: orange;
   resize: none;
   overflow: hidden;
 }

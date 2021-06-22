@@ -6,9 +6,9 @@ let rootStyle = getComputedStyle(root)
 let rootFSValue = +rootStyle.fontSize.replace('px', '')
 let rootFS = document.getElementById('root-fs')
 rootFS.value = `  
-  :root {
-    font-size: ${rootStyle.fontSize};
-  }`
+    :root {
+      font-size: ${rootStyle.fontSize};
+    }`
 
 const rootFSIncr = document.getElementById('root-fs-incr')
 rootFSIncr.onclick = () => {
@@ -17,9 +17,9 @@ rootFSIncr.onclick = () => {
   rootFSValue = +rootStyle.fontSize.replace('px', '')
   ++rootFSValue
   rootFS.value = `  
-  :root {
-    font-size: ${rootFSValue}px;
-  }`
+    :root {
+      font-size: ${rootFSValue}px;
+    }`
   root.style.fontSize = rootFSValue + 'px'
 }
 
@@ -30,9 +30,9 @@ rootFSDecr.onclick = () => {
   rootFSValue = +rootStyle.fontSize.replace('px', '')
   --rootFSValue
   rootFS.value = `  
-  :root {
-    font-size: ${rootFSValue}px;
-  }`
+    :root {
+      font-size: ${rootFSValue}px;
+    }`
   root.style.fontSize = rootFSValue + 'px'
 }
 
@@ -42,9 +42,9 @@ let unitStyle = getComputedStyle(unit)
 let unitFSValue = +unitStyle.fontSize.replace('px', '')
 let unitFS = document.getElementById('unit-fs')
 unitFS.value = `  
-  .unit {
-    font-size: ${unitStyle.fontSize};
-  }`
+    .unit {
+      font-size: ${unitStyle.fontSize};
+    }`
 
 const unitFSIncr = document.getElementById('unit-fs-incr')
 unitFSIncr.onclick = () => {
@@ -53,9 +53,9 @@ unitFSIncr.onclick = () => {
   unitFSValue = +unitStyle.fontSize.replace('px', '')
   ++unitFSValue
   unitFS.value = `
-  .unit {
-    font-size: ${unitFSValue}px;
-  }`
+    .unit {
+      font-size: ${unitFSValue}px;
+    }`
   unit.style.fontSize = unitFSValue + 'px'
 }
 
@@ -66,9 +66,9 @@ unitFSDecr.onclick = () => {
   unitFSValue = +unitStyle.fontSize.replace('px', '')
   --unitFSValue
   unitFS.value = `
-  .unit {
-    font-size: ${unitFSValue}px;
-  }`
+    .unit {
+      font-size: ${unitFSValue}px;
+    }`
   unit.style.fontSize = unitFSValue + 'px'
 }
 
@@ -78,8 +78,8 @@ setInterval(() => {
 
   const view = document.getElementById('viewport-fs')
   view.value = `
-  width: ${vw}px
-  height: ${vh}px
-  `
+    width: ${vw}px
+    height: ${vh}px
+    `
 }, 100)
 
