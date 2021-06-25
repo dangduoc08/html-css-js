@@ -1,4 +1,62 @@
 <link rel='stylesheet' href='./google_signup.css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <article class='google-signup'>
+    <div id="container_">
+        <form class='gg-signup-form' action="/submit" method='POST'>
+            <div class="form">
+                <div class="flexbox" id="grid_item1">
+                    <img id="header_img" src="./Image/Google.png">
+                </div>
+                <span class="text" id="grid_item2">Tạo Tài Khoản Google</span>
+                <div class="contain_grid">
+                    <div class="grid_">
+                        <div class="flexbox div_input" id="grid_item3">
+                            <input class="input_" type="text" placeholder="Họ" name="Ho" required >
+                        </div>
+                        <div class="flexbox div_input" id="grid_item4">
+                            <input class="input_" type="text" placeholder="Tên" name="Ten" required > 
+                        </div>
+                    </div> 
+                </div>
+               
+                <div class="flexbox div_input" id="grid_item5">
+                    <input class="input_" type="text" placeholder="Tên người dùng" name="Mail" required > 
+                    <span id="gmail_extend">@gmail.com</span>
+                </div>
+                <div class="flexbox" id="grid_item6">
+                    <span class="text note">Bạn có thể sử dụng chữ cái, số và dấu chấm</span>
+                    <span class="text text_spec">Sử dụng địa chỉ email hiện tại</span>
+                </div>
+                <div class="grid_">
+                    <div class="flexbox div_input" id="grid_item7">
+                        <input class="input_" type="text" placeholder="Mật khẩu" name="MK" required >
+                    </div>
+                    <div class="flexbox div_input" id="grid_item8">
+                        <input class="input_" type="text" placeholder="Xác nhận">
+                    </div>
+                    <div class="flexbox">
+                        <span id="note_2" class="text note">Sử dụng 8 ký tự trở lên và kết hợp chữ cái, chữ số và biểu tượng</span>
+                    </div>                    
+                </div>
+                <div class="flexbox" id="grid_item10">
+                    <input type="checkbox" name="" id="checkbox_">
+                    <label for="checkbox_">Hiện mật khẩu</label>
+                </div>
+                <div class="flexbox" id="grid_item11">
+                    <div class="flexbox">
+                        <span class="text text_spec">Đăng nhập</span>
+                    </div>
+                    <div class="flexbox" id="subm_btn">
+                        <input class="text_spec" type="submit" value="Tiếp theo" id="button_">
+                    </div>
 
+                </div>
+            </div>
+        </form>
+
+        <div class="logo">            
+            <img id= "logo_img" src="./Image/account.png">            
+            <span>Một tài khoản. Hoạt động trên mọi sản phẩm và dịch vụ của Google.</span>
+        </div>
+    </div>
 </article>
