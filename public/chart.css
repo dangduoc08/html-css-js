@@ -1,0 +1,53 @@
+.chart {
+  position: relative;
+}
+
+.chart__bar {
+  background-color: #fff;
+  min-width: 80vw;
+  min-height: 80vh;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.chart__axis {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  padding: .5rem;
+  row-gap: .5rem;
+  color: #1b1e23;
+  font-size: 0.625rem;
+  font-weight: 300;
+}
+
+.chart__company {
+  height: 44px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 2px;
+  background-color: #f7bb80;
+  transition: width .5s linear;
+}
+
+.chart__value {
+  background-color: red;
+  height: 44px;
+  width: 0%;
+}
+
+.chart__value.chart__value:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.chart__value.chart__value:last-child>div:first-child {
+  font-weight: 600;
+}
+
+.chart__value.chart__value:last-child>:last-child {
+  font-size: 0.5rem;
+  font-weight: 400;
+}
