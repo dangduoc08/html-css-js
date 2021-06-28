@@ -20,7 +20,7 @@
 .grid_{
     display: grid; 
     grid-template-columns: 100%;  
-    row-gap: 5px   ;  
+    row-gap: 2px   ;  
 }
 .flexbox{
     display: flex;    
@@ -32,6 +32,7 @@
     background-color:  transparent;
     margin: 2px;
     padding: 6px 8px;
+    box-sizing: border-box;
     
 }
 .input_{
@@ -39,6 +40,7 @@
     flex-basis: 100%;
     font-size: 15px;
     height: 20px;
+    overflow-x: auto;
 }
 .div_input:focus-within {
     border: 2px solid  #1a73e8;
@@ -54,12 +56,13 @@ input{
 #grid_item5>input{
     flex-basis: 100%;
 }
-#grid_item11{
-    flex-basis: 50%;
-}
+
 .text{
     white-space: normal;
     font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+}
+#grid_item1{
+    row-gap: 100px;
 }
 #grid_item2{
     color: #202124;
@@ -73,25 +76,39 @@ input{
     margin-top: 0;
     text-align: start;
 }
+
 #grid_item6{
     flex-direction: column;
+}
+#grid_item10{
+    flex-wrap: wrap;
+}
+#grid_item10>label{
+    padding-left: 20px;
+}
+#grid_item11{
+    flex-basis: 50%;
+    flex-wrap: wrap;
+}
+#grid_item11>div{
+    flex-basis: 50%;
 }
 #gmail_extend{
     font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
 }
 .note{
-    margin: 0px 0px 0px 10px;
-    height: 17px;
+    height: auto;
     text-align: left;
     color: #606770;
     font-size: 13px;
     font-weight: normal;
+    margin: 0px 0px 0px 10px;
 }
 .text_spec{
-    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-family: "Product Sans Regular",Roboto,Arial,sans-serif;
     font-size: .875rem;
     letter-spacing: .0107142857em;    
-    font-weight: bold;
+    font-weight: 500;
     color: #1a73e8;
     text-transform: none;
     text-align: start;
@@ -112,18 +129,12 @@ input{
     height: 36px;
 }
 
-#grid_item11>div{
-    flex-basis: 50%;
-}
+
 #subm_btn{
     justify-content: flex-end;
 }
-#grid_item1{
-    row-gap: 100px;
-}
-#grid_item10>label{
-    padding-left: 20px;
-}
+
+
 
 /*LOGO*/
 .logo{
@@ -136,6 +147,7 @@ input{
 #logo_img{
     width: 244px;
     height: 244px;
+    object-fit: contain;
 }
 .logo>span{
     color: #202124;
@@ -144,8 +156,8 @@ input{
     line-height: 1.4286;
     font-size: 15px;
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
 }
 
 /*450 <= width <= 600 */
@@ -159,18 +171,33 @@ input{
         margin-right: auto;       
     }
     .grid_{
-        /* grid-template-columns: 49% 49%; /*an may??*/
-        column-gap: 10px; */
+        grid-template-columns: 49% 49%; /*an may??*/
+        column-gap: 5px;
     }
-    #note_2{
+    .note{
+        grid-column: 1/span 3;
+        text-align: start;
+        
+    }
+    #grid_item5{
         grid-column: 1/span 3;
     }
-     
 }
 /*600 < width <= 900 */
 @media screen and (min-width: 901px) {
    .logo{
        display: flex;
+       -webkit-box-sizing: border-box;
+       box-sizing: border-box;
+       display: -webkit-box;
+       display: -webkit-flex;
+       -webkit-flex-shrink: 0;
+       flex-shrink: 0;
+       padding-left: 48px;
+       width: 300px;
    }
      
+   .form{
+    grid-template-columns: 354px;
+   }
 }
