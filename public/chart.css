@@ -21,19 +21,38 @@
   font-weight: 300;
 }
 
+.chart__pivot, .chart__company {
+  display: grid;
+  text-align: right;
+}
+
 .chart__company {
   height: 44px;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
   grid-gap: 2px;
   background-color: #f7bb80;
-  transition: width .5s linear;
+}
+
+@keyframes increase_frame {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .chart__value {
-  background-color: red;
+  position: relative;
   height: 44px;
   width: 0%;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.chart__value.chart__value:not(:last-child)>div {
+  position: absolute;
+  top: -15px;
+  right: -15px;
 }
 
 .chart__value.chart__value:last-child {
