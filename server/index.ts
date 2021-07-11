@@ -89,6 +89,12 @@ app.all('/submit', (req: Request, res: Response) => {
   })
 })
 
+app.get('/get_links', (req, res) => {
+  setTimeout(() => {
+    res.send('./assets/db.txt')
+  }, 3000)
+})
+
 const server = app.listen(parseInt(process?.env?.SERVER_PORT ?? '80'), '127.0.0.1')
 
 server.on('listening', () => {
