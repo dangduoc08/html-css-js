@@ -95,7 +95,7 @@ app.get('/get_links', (req, res) => {
   }, 3000)
 })
 
-const server = app.listen(parseInt(process?.env?.SERVER_PORT ?? '80'), '127.0.0.1')
+const server = app.listen(parseInt(process?.env?.SERVER_PORT ?? '80'))
 
 server.on('listening', () => {
   const addr = server.address() as AddressInfo
